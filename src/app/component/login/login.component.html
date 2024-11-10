@@ -1,0 +1,92 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem">
+            <div class="card-body p-5 text-center">
+              
+              <!-- Formulario de Iniciar Sesión -->
+              <div *ngIf="!isrecuperarview && !isnocredencialview">
+                <div class="mb-md-5 mt-md-4 pb-5">
+                  <h2 class="fw-bold mb-2 text-uppercase">Iniciar Sesión</h2>
+                  <p class="text-white-50 mb-5">Por favor ingrese sus credenciales correspondientes</p>
+  
+                  <div data-mdb-input-init class="form-outline form-white mb-4">
+                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                    <label class="form-label" for="typeEmailX">Usuario</label>
+                  </div>
+  
+                  <div data-mdb-input-init class="form-outline form-white mb-4">
+                    <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                    <label class="form-label" for="typePasswordX">Clave</label>
+                  </div>
+  
+                  <p class="small mb-5 pb-lg-2">
+                    <a class="text-white-50" (click)="showNoCredentialsView()">Olvidó su contraseña?</a>
+                  </p>
+  
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Iniciar Sesión</button>
+                </div>
+  
+                <div>
+                  <p class="mb-0">¿No tiene sus credenciales aún? <a href="#!" class="text-white-50 fw-bold" (click)="showNoCredentialsView()">Contacte con TI</a></p>
+                </div>
+              </div>
+  
+              <!-- Formulario de Recuperar Contraseña -->
+              <div *ngIf="isrecuperarview && !isSuccessView">
+                <div class="mb-md-5 mt-md-4 pb-5">
+                  <h2 class="fw-bold mb-2 text-uppercase">RECUPERAR CONTRASEÑA</h2>
+                  <p class="text-white-50 mb-5">Ingrese su correo electrónico para recuperar su contraseña</p>
+  
+                  <div data-mdb-input-init class="form-outline form-white mb-4">
+                    <input name="EmailId" [(ngModel)]="userayudaObj.EmailId" type="email" id="typeEmailX" class="form-control form-control-lg" />                    <label class="form-label" for="typeEmailX">Email</label>
+                  </div>
+  
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" (click)="onSubmitRecovery()">Enviar</button>
+                </div>
+              </div>
+  
+              <!-- Formulario de No cuenta con credenciales -->
+              <div *ngIf="isnocredencialview && !isSuccessView">
+                <div class="mb-md-5 mt-md-4 pb-5">
+                  <h2 class="fw-bold mb-2 text-uppercase">No cuenta con credenciales</h2>
+                  <p class="text-white-50 mb-5">Ingrese su correo electrónico para poder comunicarnos en el menos tiempo posible</p>
+  
+                  <div data-mdb-input-init class="form-outline form-white mb-4">
+                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                    <label class="form-label" for="typeEmailX">Email</label>
+                  </div>
+  
+                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" (click)="onSubmitRecovery()">Enviar</button>
+                </div>
+              </div>
+              <!-- RECUPERACIÓN ENVIADA CON EXITO -->
+              <div *ngIf="isSuccessView">
+              <div class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <img src="https://univerperu.com/wp-content/uploads/2023/07/Universidad-Peruana-Union-UPeU-300x87.png" alt="">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">RECUPERACIÓN ENVIADA CON EXITO</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Revise su bandeja de entrada , se le enviara
+                        un codigo para cambiar su contraseña.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

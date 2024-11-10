@@ -1,0 +1,118 @@
+/* Navbar settings */
+.navbar {
+    background-color: #002D72;
+    color: white;
+}
+.offcanvas{
+    background-color: #002D72;
+    color: white;
+}
+.navbar-toggler {
+    background-color: #002D72;
+    color: white;
+    border: 1px solid white;
+}
+
+.navbar-toggler:hover {
+    background-color: #FFC107;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Sidebar settings */
+.p-sidebar {
+    background-color: #002D72;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.student-name {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+}
+
+.student-role {
+    font-size: 14px;
+    color: #C0C0C0;
+    margin: 0;
+}
+
+/* Menu items styling */
+.menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.menu-item {
+    width: 100%;
+    text-align: left;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #FFC107;
+    color: #002D72;
+}
+
+/* Settings items styling */
+.settings {
+    margin-top: 30px;
+}
+.item-institucional{
+   height: 50px;
+}
+.item-institucional:hover{
+    background-color: #FFC107;
+    
+ }
+ 
+.setting-item {
+    width: 100%;
+    text-align: left;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.setting-item:hover {
+    background-color: #FFC107;
+    color: #002D72;
+}
